@@ -1,0 +1,70 @@
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-10">
+					<div class="wrap d-md-flex">
+						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+							<div class="text w-100">
+								<h2>Welcome to tsy aiko</h2>
+								<p class="mb-0 text-muted">
+                  Vous avez deja un compte?
+                </p>	
+                <a [routerLink]="['/auth/signin']" class="btn btn-white btn-outline-white" > Log in</a>
+							</div>
+			      </div>
+						<div class="login-wrap p-4 p-lg-5">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">Sign Up</h3>
+			      		</div>
+								<div class="w-100">
+									<p class="social-media d-flex justify-content-end">
+										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+									</p>
+								</div>
+			      	</div>
+              <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+			      		<div class="form-group mb-3">
+			      			<label class="label" for="name">Nom</label>
+                  <input class="form-control" formControlName="nom" type="text" placeholder="Nom">
+			      		</div>
+                <div class="form-group mb-3">
+			      			<label class="label" for="name">Prénom</label>
+                  <input class="form-control" formControlName="prenom" type="text" placeholder="Prenom">
+			      		</div>
+                <div class="form-group mb-3">
+			      			<label class="label" for="name">Identifiant</label>
+                  <input type="email" class="form-control" placeholder="Identifiant"   formControlName="login" />
+			      		</div>
+                <div class="form-group mb-3">
+		            	<label class="label" for="password">Mot de passe</label>
+                  <input type="password" class="form-control" placeholder="Mot de passe"   formControlName="password" />
+		            </div>
+                <div class="form-group mb-3">
+		            	<label class="label" for="password">Confirmer le mot de passe</label>
+                  <input type="password" class="form-control" placeholder="Mot de passe"  formControlName="password" />
+		            </div>
+		            <div class="form-group">
+                  <div *ngIf="error" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Veuillez remplir chaque formulaire !
+                  </div>
+		            	<div *ngIf="isLoading" class="text-center">
+                    <button class="btn btn-primary" type="button" disabled>
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      Enregistrement en cours...
+                    </button>
+                  </div>
+                  
+                  <button *ngIf="!isLoading" class="btn btn-primary mb-4">Enregistrer</button>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+</section>
+

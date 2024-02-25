@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-xl-12">
+      <app-card
+        cardTitle="Liste des voitures terminés"
+        [options]="false"
+        blockClass="table-border-style"
+      >
+          <div class="container">
+              <div class="box" [ngStyle]="{'display': 'flex', 'justify-content': 'space-between'}">
+                <div class="box-part">
+                              <input type="text" #indice id="icon-search" class="form-control mb-4" placeholder="search . . " (keyup)="search(indice.value)">
+                </div> 
+              </div>
+          </div>
+  
+          <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                      <th>Voiture</th>
+                      <th>Designation</th>
+                      <th>Date depot</th>
+                      <th>Date de debut du reparation</th>
+                      <th>Date de fin du reparation</th>
+                      <th>Etat</th>
+                      <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let rep of reparations | paginate: { itemsPerPage: 5, currentPage: p }" >
+                        <td (click)="openModal(rep._id)">{{ rep.modele +" "+rep.matriculation}}</td>
+                        <td >{{ rep.designation }}</td>
+                        <td>{{ rep.date_depot }}</td>
+                        <td>{{ rep.datedebutreparation }}</td>
+                        <td>{{ rep.dateterminaison }}</td>
+                        <td>{{ rep.etat }}</td>
+                        <td>{{ this.Transformer(rep.total) }}</td>
+                        <td *ngIf="estFinancier" >
+                            <button *ngIf="isLoading" class="btn btn-primary" type="button" disabled>
+                              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                  facturation en cours...
+                            </button>
+                            <button  *ngIf="rep.facturer==null && isLoading==false" class="btn btn-primary" (click)="facturer(rep)">Facturer</button>
+                            <button  *ngIf="rep.facturer==1 && isLoading==false" class="btn btn-primary"  [routerLink]="['/facture/fiche']" [state]="rep" >Voir facture</button>
+                        </td>
+                  </tr>
+                </tbody>
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  
+              </table>
+            </div>
+      </app-card>
+    </div>
+  </div>
+  

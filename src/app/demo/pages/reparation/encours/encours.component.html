@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-xl-12">
+      <app-card
+        cardTitle="Liste des voitures en cours de reparation"
+        [options]="false"
+        blockClass="table-border-style"
+      >
+          <div class="container">
+              <div class="box" [ngStyle]="{'display': 'flex', 'justify-content': 'space-between'}">
+
+              <div class="box-part">
+                            <input type="text" #indice id="icon-search" class="form-control mb-4" placeholder="search . . " (keyup)="search(indice.value)">
+              </div> 
+              </div>
+          </div>
+  
+          <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                      <th>Designation</th>
+                      <th>Depot</th>
+                      <th>Modele</th>
+                      <th>Immatriculation</th>
+                      <th>Etat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let rep of reparations | paginate: { itemsPerPage: 5, currentPage: p }"  (click)="openModal(rep._id)">
+                      <td>{{ rep.designation }}</td>
+                      <td>{{ rep.date_depot }}</td>
+                      <td>{{ rep.modele }}</td>
+                      <td>{{ rep.matriculation }}</td>
+                      <td>{{ rep.etat }}</td>
+                   
+                  </tr>
+                </tbody>
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  
+              </table>
+            </div>
+      </app-card>
+    </div>
+  </div>
+  

@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-xl-12">
+    <app-card
+      cardTitle="Historique de reparation"
+      [options]="false"
+      blockClass="table-border-style"
+    >
+        <div class="container">
+            <div class="box" [ngStyle]="{'display': 'flex', 'justify-content': 'space-between'}">
+            <div class="box-part"><h5>Voiture : {{voiture.matriculation +" "+voiture.modele }}</h5></div>
+            <div class="box-part">
+						  <input type="text" #indice id="icon-search" class="form-control mb-4" placeholder="search . . " (keyup)="search(indice.value)">
+            </div> 
+            <div class="box-part"><button class="btn btn-primary" (click)="openModal(voiture)">Nouvelle réparation</button></div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                    <th>Designation</th>
+                    <th>Depot</th>
+                    <th>Début</th>
+                    <th>Fin</th>
+                    <th>Etat</th>
+                </tr>
+              </thead>
+              <div class="row" *ngIf="reparations.length == 0 ">
+                <div class="col-sm-12">
+                  <div class="card">
+                    <div class="card-block">
+                      <div class="row justify-content-center">
+                        <div class="col-sm-12">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                              Chargement en cours des Historique de reparation...
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <tbody>
+                <tr *ngFor="let rep of reparations | paginate: { itemsPerPage: 5, currentPage: p }" >
+                    <td (click)="openDetails(rep._id)">{{ rep.designation }}</td>
+                    <td>{{ rep.date_depot }}</td>
+                    <td>{{ rep.datedebut }}</td>
+                    <td>{{ rep.datefin }}</td>
+                    <td>{{ rep.etat }}</td>
+                    <td><button  *ngIf="rep.facturer==1" class="btn btn-primary"  [routerLink]="['/facture/fiche']" [state]="rep" >Etat de paiement</button></td>
+                </tr>
+              </tbody>
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+            </table>
+          </div>
+    </app-card>
+  </div>
+</div>

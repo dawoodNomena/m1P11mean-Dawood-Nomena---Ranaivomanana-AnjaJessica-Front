@@ -1,0 +1,68 @@
+<div class="row" *ngIf="voitures != null">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-block">
+				<div class="row justify-content-center">
+					<div class="col-sm-6">
+						<input type="text" #indice id="icon-search" class="form-control mb-4" placeholder="search . . " (keyup)="search(indice.value)">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="{{ voiture.design }} col-xl-4" *ngFor="let voiture of voitures">
+			<app-card [hidHeader]="true">
+				<div class="col-9">
+				<img [src]="voiture.image" width="100%" height="100%" style="border: 1px solid #ddd;
+				border-radius: 5px;
+				padding: 5px;
+				width: 170px;">
+			</div>
+				<div class="row d-flex align-items-center">
+					<div class="col-9">
+					<h3 class="f-w-300 d-flex align-items-center m-b-0">
+						{{ voiture.matriculation + " " +voiture.modele}}
+						
+					</h3>
+					</div>
+					<div class="col-3 text-end">
+						<p class="m-b-0"> 
+							<button type="button" class="btn btn-primary" [routerLink]="['/voiture/fiche']" [state]="voiture">
+								Voir
+						  	</button>
+						</p>
+
+					</div>
+				</div>
+			</app-card>
+		</div>
+</div>
+<div class="row" *ngIf="voitures == null && loading == false">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-block">
+				<div class="row justify-content-center">
+					<div class="col-sm-12">
+						<b class="text-center">Vous n'avez pas encore ajouter de voitures.</b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row" *ngIf="voitures == null && loading == true">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-block">
+				<div class="row justify-content-center">
+					<div class="col-sm-12">
+							<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+								Chargement en cours de vos voitures...
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
