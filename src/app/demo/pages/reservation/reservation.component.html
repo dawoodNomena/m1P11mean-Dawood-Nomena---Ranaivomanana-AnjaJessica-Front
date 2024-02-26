@@ -21,11 +21,10 @@
         <div class=container>
           <nav>
             <div>
-              <a href=# class=active>HOME</a>
+              <a [routerLink]="['/accueil']" >HOME</a>
             </div>
             <div>
-              <a [routerLink]="['/services']" >Services</a>
-              
+              <a [routerLink]="['/services']">Services</a>
             </div>
             <div>
               <a href=#>Mes rendez vous</a>
@@ -51,11 +50,7 @@
           <div class="item item-kv-1 active">
             <div class=container>
               <div class=row>
-                <div class="item-kv-txt col-md-6 col-xl-4">
-                  <h2>Take Care of Your Health</h2>
-                  <h3 class> At Medina, we are dedicated to diagnosing all kinds of diseases. </h3>
-                  <a [routerLink]="['/reservation']" class=btn>Plannifier un rendez vous</a>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -63,6 +58,68 @@
       </div>
     </section>
    
+    <div class=services-container>
+      <div class=inner-container>
+        <h1 class=section-title>Prise de rendez-vous</h1>
+        <div class=border></div>
+        <div class=service-container>
+          <div class=service-box>
+            <div class=service-icon>
+              <img src="assets/images/Eyebrow-shaping-and-tinting.png" >
+            </div>
+            <div class=service-title>
+              <b>Eyebrow-shaping-and-tinting</b>
+            </div>
+            <div class=description> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
+          </div>
+          <div class=service-box>
+            <div class=service-icon>
+              <img src="assets/images/Facial-treatments.png" >
+            </div>
+            <div class=service-title>
+              <b>Facial treatments</b>
+            </div>
+            <div class=description> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
+          </div>
+          <div class=service-box>
+            <div class=service-icon>
+              <img src="assets/images/Haircut-and-styling.png" style=margin-top:.3em >
+            </div>
+            <div class=service-title>
+              <b>Haircut and styling</b>
+            </div>
+            <div class=description> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
+          </div>
+          <div class=service-box>
+            <div class=service-icon>
+              <img src="assets/images/Hair-removal.png" >
+            </div>
+            <div class=service-title>
+              <b>Hair removal</b>
+            </div>
+            <div class=description> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
+          </div>
+          <div class=service-box>
+            <div class=service-icon>
+              <img src="assets/images/skin-rejuvenation.png">
+            </div>
+            <div class=service-title>
+              <b>Skin rejuvenation</b>
+            </div>
+            <div class=description> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
+          </div>
+          <div class=service-box>
+            <div class=service-icon>
+              <img src="assets/images/Spa-treatments.png">
+            </div>
+            <div class=service-title>
+              <b>Spa treatments</b>
+            </div>
+            <div class=description> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <footer class=main-footer>
       <div class=container>
@@ -121,7 +178,7 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <div class=contact-main>
-                <a href=#>nomena@gmail.com</a>
+                <a href=#>designbyali@mail.com</a>
               </div>
             </div>
           </div>

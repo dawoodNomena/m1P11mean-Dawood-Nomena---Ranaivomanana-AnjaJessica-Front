@@ -90,6 +90,11 @@ const routes: Routes = [
         loadComponent: () => import('./demo/services/servicescomponent'), 
         pathMatch: 'full',
       },
+      {
+        path: 'reservation',
+        loadComponent: () => import('./demo/reservation/reservationcomponent'), 
+        pathMatch: 'full',
+      },
     ],
   },
   // {

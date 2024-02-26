@@ -4,20 +4,20 @@ import { Router, RouterModule } from '@angular/router';
 
 
 @Component({
-  selector: 'app-accueil',
+  selector: 'app-reservation',
   standalone: true,
   imports: [CommonModule,RouterModule],
-  templateUrl: './accueil.component.html',
-  styleUrls: ['./accueil.component.scss','./style.css','./style2.css'],
+  templateUrl: './reservation.component.html', 
+  styleUrls: ['./reservation.component.scss','./style.css','./style2.css'],
 })
-export default class AccueilComponent implements OnInit {
+export default class ReservationComponent implements OnInit {
     lineSmoothMorrisOption: any;
     lineSmoothMorrisData: any;
     date = new Date();
     currentMonth: string;
     startDate: Date;
     endDate: Date;
-    token : string ;
+    token : string ; 
     ben : any = 0;
     chiffre : any = 0;
     moyenne : any;
