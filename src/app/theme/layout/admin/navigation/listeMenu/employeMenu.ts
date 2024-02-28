@@ -15,13 +15,13 @@ export const EmployeMenu = [
                 id: 'button',
                 title: 'Suivi des taches',
                 type: 'item',
-                url: '/suivi_taches',
+                url: '/suivi_tache',
             },
             {
                 id: 'button',
                 title: 'Mon profil',
                 type: 'collapse',
-                url: '/suivi_taches',
+                url: '/mon_profil',
                 children: [
                     {
                         id: 'button',

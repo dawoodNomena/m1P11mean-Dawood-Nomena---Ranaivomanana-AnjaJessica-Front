@@ -27,6 +27,17 @@ const routes: Routes = [
           (m) => m.Details_rdvModule
         ),
       },
+      {
+        path: 'suivi_tache',
+        loadComponent: () => import('./demo/back/employe/suivi_tache/suivi_tache.component'),
+        pathMatch: 'full',
+      },
+      {
+        path: 'permission',
+        loadComponent: () => import('./demo/back/employe/permission/permission.component'),
+        pathMatch: 'full',
+      },
+
       // {
       //   path: 'dashboard',
       //   loadComponent: () => import('./demo/dashboard/dashboard.component'),

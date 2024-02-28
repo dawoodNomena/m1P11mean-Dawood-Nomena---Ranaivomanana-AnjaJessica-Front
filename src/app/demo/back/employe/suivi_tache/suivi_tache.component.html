@@ -1,0 +1,66 @@
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-block">
+				<div class="row justify-content-center">
+					<div class="col-sm-6">
+						<input type="date" #indice id="icon-search" class="form-control mb-4" placeholder="Date 1 . . ">
+						<input type="date" #indice id="icon-search" class="form-control mb-4" placeholder="Date 2 . . ">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-12">
+		<app-card
+		  cardTitle=""
+		  [options]="false"
+		  blockClass="table-border-style"
+		>
+			<div class="table-responsive">
+				<table class="table table-xl table-hover">
+				  <thead>
+					<tr>
+						<th>Client</th>
+						<th>Service</th>
+						<th>Commission</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td>Client 1</td>
+					  <td>Service 1</td>
+                      <td>10 000</td>
+					</tr>
+
+					<tr>
+                        <td>Client 1</td>
+                        <td>Service 2</td>
+                        <td>15 000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Client 2</td>
+                        <td>Service 3</td>
+                        <td>5 000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Total</td>
+                        <td>30 000</td>
+                    </tr>
+					<!-- <tr *ngFor="let rep of reparations | paginate: { itemsPerPage: 5, currentPage: p }" >
+						<td>{{ rep.designation }}</td>
+						<td>{{ rep.date_depot }}</td>
+						<td>{{ rep.modele }}</td>
+						<td>{{ rep.matriculation }}</td>
+						<td>{{ rep.etat }}</td>
+						<td><button type="button" class="btn btn-outline-dark" (click)="affecter(rep._id)" >Recuperer</button> </td>
+					</tr> -->
+				  </tbody>
+	
+				</table>
+			  </div>
+		</app-card>
+	</div>
+</div>
