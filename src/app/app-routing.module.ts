@@ -95,6 +95,11 @@ const routes: Routes = [
         loadComponent: () => import('./demo/reservation/reservationcomponent'), 
         pathMatch: 'full',
       },
+      {
+        path: 'historique_rdv',
+        loadComponent: () => import('./demo/historique_rdv/historique_rdvcomponent'), 
+        pathMatch: 'full',
+      },
     ],
   },
   // {

@@ -24,10 +24,10 @@
               <a [routerLink]="['/accueil']" >HOME</a>
             </div>
             <div>
-              <a [routerLink]="['/services']" class=active >Services</a>
+              <a [routerLink]="['/services']" >Services</a>
             </div>
             <div>
-              <a [routerLink]="['/historique_rdv']">Mes rendez vous</a>
+              <a [routerLink]="['/historique_rdv']" class=active>Mes rendez vous</a>
             </div>
             <div>
               <a href=#>Mes préférences</a>
@@ -60,62 +60,64 @@
    
     <div class=services-container>
       <div class=inner-container>
-        <h1 class=section-title>services</h1>
-        <div class=border></div>
-        <div class=service-container>
-          <div class=service-box>
-            <div class=service-icon>
-              <img src="assets/images/Eyebrow-shaping-and-tinting.png" >
-            </div>
-            <div class=service-title>
-              <b>Eyebrow-shaping-and-tinting</b>
-            </div>
-            <div class=description> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
-          </div>
-          <div class=service-box>
-            <div class=service-icon>
-              <img src="assets/images/Facial-treatments.png" >
-            </div>
-            <div class=service-title>
-              <b>Facial treatments</b>
-            </div>
-            <div class=description> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
-          </div>
-          <div class=service-box>
-            <div class=service-icon>
-              <img src="assets/images/Haircut-and-styling.png" style=margin-top:.3em >
-            </div>
-            <div class=service-title>
-              <b>Haircut and styling</b>
-            </div>
-            <div class=description> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
-          </div>
-          <div class=service-box>
-            <div class=service-icon>
-              <img src="assets/images/Hair-removal.png" >
-            </div>
-            <div class=service-title>
-              <b>Hair removal</b>
-            </div>
-            <div class=description> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
-          </div>
-          <div class=service-box>
-            <div class=service-icon>
-              <img src="assets/images/skin-rejuvenation.png">
-            </div>
-            <div class=service-title>
-              <b>Skin rejuvenation</b>
-            </div>
-            <div class=description> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
-          </div>
-          <div class=service-box>
-            <div class=service-icon>
-              <img src="assets/images/Spa-treatments.png">
-            </div>
-            <div class=service-title>
-              <b>Spa treatments</b>
-            </div>
-            <div class=description> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
+        <h1 class=section-title>Historiques de mes rendez-vous</h1>
+        <div class="row">
+          <div class="col-xl-12">
+            <app-card
+              cardTitle=""
+              [options]="false"
+              blockClass="table-border-style"
+            >
+                <div class="container">
+                    <div class="box" [ngStyle]="{'display': 'flex', 'justify-content': 'space-between'}">
+                      <div class="box-part">
+                          <input type="text" #indice id="icon-search" class="form-control mb-4" placeholder="search . . " (keyup)="search(indice.value)">
+                      </div> 
+                    </div>
+                </div>
+        
+                <div class="table-responsive">
+                    <table class="table table-xl table-hover">
+                      <thead>
+                        <tr>
+                            <th>Date et heure </th>
+                            <th>Employé</th>
+                            <th>Etat</th>
+                            <th>Paiement</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>2024-02-20 08:00:00</td>
+                          <td>Employé 1</td>
+                          <td>Terminé</td>
+                          <td>Payé</td>
+                          <td><button type="button" class="btn btn-outline-dark">Voir details</button> </td>
+                        </tr>
+
+                        <tr>
+                          <td>2024-02-20 08:00:00</td>
+                          <td>Employé 2</td>
+                          <td>Rdv</td>
+                          <td>Payé</td>
+                          <td><button type="button" class="btn btn-outline-dark">Voir details</button> </td>
+                          <td><button type="button" class="btn btn-outline-dark">Payer accompte</button></td>
+                        </tr>
+                        <!-- <tr *ngFor="let rep of reparations | paginate: { itemsPerPage: 5, currentPage: p }" >
+                            <td>{{ rep.designation }}</td>
+                            <td>{{ rep.date_depot }}</td>
+                            <td>{{ rep.modele }}</td>
+                            <td>{{ rep.matriculation }}</td>
+                            <td>{{ rep.etat }}</td>
+                            <td><button type="button" class="btn btn-outline-dark" (click)="affecter(rep._id)" >Recuperer</button> </td>
+                        </tr> -->
+                      </tbody>
+        
+                    </table>
+                  </div>
+            </app-card>
           </div>
         </div>
       </div>
