@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import FicheVoitureCompoment from './fiche-voiture.component';
 
+import  BasicElementsComponent  from './liste-services.component';
 
-describe('TblBootstrapComponent', () => {
-  let component: FicheVoitureCompoment;
-  let fixture: ComponentFixture<FicheVoitureCompoment>;
+describe('BasicElementsComponent', () => {
+  let component: BasicElementsComponent;
+  let fixture: ComponentFixture<BasicElementsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FicheVoitureCompoment],
+      imports: [BasicElementsComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(FicheVoitureCompoment);
+    fixture = TestBed.createComponent(BasicElementsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

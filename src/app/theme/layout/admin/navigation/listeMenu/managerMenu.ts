@@ -27,6 +27,26 @@ export const ManagerMenu = [
           },
           {
             id: 'button',
+            title: 'Services',
+            type: 'collapse',
+            icon: 'feather icon-box',
+            children: [
+              {
+                id: 'button',
+                title: 'Ajouter',
+                type: 'item',
+                url: '/services/ajout',
+              },
+              {
+                id: 'button',
+                title: 'Liste',
+                type: 'item',
+                url: '/services/list',
+              }   
+            ],
+          },
+          {
+            id: 'button',
             title: 'Dépenses',
             type: 'collapse',
             icon: 'feather icon-box',

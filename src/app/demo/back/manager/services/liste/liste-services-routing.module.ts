@@ -6,19 +6,9 @@ const routes: Routes = [
     path: '',
     children: [
       {
-        path: 'ajout',
-        loadComponent: () =>
-          import('./ajout/ajout.component'),  
-      },
-    ],
-  },
-  {
-    path: '',
-    children: [
-      {
         path: 'list',
         loadComponent: () =>
-          import('./liste/liste-personnel.component'),  
+          import('./liste-services.component'),
       },
     ],
   },
@@ -28,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PersonnelRoutingModule {}
+export class FormElementsRoutingModule {}
