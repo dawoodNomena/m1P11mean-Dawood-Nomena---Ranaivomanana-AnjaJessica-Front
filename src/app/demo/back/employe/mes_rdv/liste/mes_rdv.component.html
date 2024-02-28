@@ -16,14 +16,6 @@
 		  [options]="false"
 		  blockClass="table-border-style"
 		>
-			<div class="container">
-				<div class="box" [ngStyle]="{'display': 'flex', 'justify-content': 'space-between'}">
-				  <div class="box-part">
-					  <input type="text" #indice id="icon-search" class="form-control mb-4" placeholder="search . . " (keyup)="search(indice.value)">
-				  </div> 
-				</div>
-			</div>
-	
 			<div class="table-responsive">
 				<table class="table table-xl table-hover">
 				  <thead>
@@ -38,13 +30,13 @@
 					<tr>
 					  <td>2024-02-20 08:00:00</td>
 					  <td>Client 1</td>
-					  <td><button type="button" class="btn btn-outline-dark" [routerLink]="['/details_rdv/fiche']">Voir details</button> </td>
+					  <td><button type="button" class="btn btn-outline-dark" [routerLink]="['/mes_rdv/fiche']">Voir details</button> </td>
 					</tr>
 
 					<tr>
 					  <td>2024-02-20 08:00:00</td>
 					  <td>Client 2</td>
-					  <td><button type="button" class="btn btn-outline-dark" [routerLink]="['/details_rdv/fiche']">Voir details</button> </td>
+					  <td><button type="button" class="btn btn-outline-dark" [routerLink]="['/mes_rdv/fiche']">Voir details</button> </td>
 					  <td><button type="button" class="btn btn-outline-dark">Terminer</button></td>
 					</tr>
 					<!-- <tr *ngFor="let rep of reparations | paginate: { itemsPerPage: 5, currentPage: p }" >

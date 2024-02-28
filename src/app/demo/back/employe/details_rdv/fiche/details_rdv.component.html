@@ -1,0 +1,56 @@
+
+
+<div class=services-container>
+  <div class=inner-container>
+    <div class="row">
+      <div class="col-xl-12">
+          <div class="container">
+            <div class="box" [ngStyle]="{'display': 'flex'}">
+              <div class="col-md-2"><p class="text-black"><b>Date et heure : </b></p></div> <div class="col-md-3"><p class="text-black">2024-02-20 08:00:00</p></div> 
+            </div>
+            <div class="box" [ngStyle]="{'display': 'flex'}">
+              <div class="col-md-2"><p class="text-black"><b>Client : </b></p></div> <div class="col-md-3"><p class="text-black"> Client 1</p></div> 
+            </div>
+          </div>
+          <app-card
+            cardTitle="Services de ce rendez-vous"
+            [options]="false"
+            blockClass="table-border-style"
+          >
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Durée (en heure)</th>
+                    <th>Prix</th>
+                    <th>Commission</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>Service 1</td>
+                    <td> 2 </td>
+                    <td> 120 000</td>
+                    <td> 20 000</td>
+                </tr>
+                <tr>
+                  <td>Service 2</td>
+                  <td> 1 </td>
+                  <td> 50 000</td>
+                  <td> 5 000</td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td> 3 </td>
+                  <td> 170 000</td>
+                  <td> 25 000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </app-card>
+      </div>
+    </div>
+  </div>
+</div>

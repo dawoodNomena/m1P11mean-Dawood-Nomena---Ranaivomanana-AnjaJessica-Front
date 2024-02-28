@@ -21,6 +21,12 @@ const routes: Routes = [
           (m) => m.Mes_rdvModule
         ),
       },
+      {
+        path: 'mes_rdv',
+        loadChildren: () => import('./demo/back/employe/details_rdv/details_rdv.module').then(
+          (m) => m.Details_rdvModule
+        ),
+      },
       // {
       //   path: 'dashboard',
       //   loadComponent: () => import('./demo/dashboard/dashboard.component'),
