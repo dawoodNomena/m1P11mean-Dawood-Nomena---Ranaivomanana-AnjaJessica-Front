@@ -49,6 +49,12 @@ const routes: Routes = [
           (m) => m.ServicesModule
         ),
       },
+      {
+        path: 'offre',
+        loadChildren: () => import('./demo/back/manager/offre/offre.modules').then(
+          (m) => m.OffrelModule
+        ),
+      },
 
       // {
       //   path: 'dashboard',

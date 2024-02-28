@@ -27,6 +27,26 @@ export const ManagerMenu = [
           },
           {
             id: 'button',
+            title: 'Offre spécial',
+            type: 'collapse',
+            icon: 'feather icon-box',
+            children: [
+              {
+                id: 'button',
+                title: 'Ajouter',
+                type: 'item',
+                url: '/offre/ajout',
+              },
+              {
+                id: 'button',
+                title: 'Liste',
+                type: 'item',
+                url: '/offre/list',
+              }   
+            ],
+          },
+          {
+            id: 'button',
             title: 'Services',
             type: 'collapse',
             icon: 'feather icon-box',
