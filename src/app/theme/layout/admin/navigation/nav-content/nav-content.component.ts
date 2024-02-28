@@ -14,6 +14,7 @@ import { environment } from 'src/environments/environment';
 import { EmployeMenu } from '../listeMenu/employeMenu';
 import { FinanceMenu } from '../listeMenu/financeMenu';
 import { AtelierMenu } from '../listeMenu/atelierMenu';
+import { ManagerMenu } from '../listeMenu/managerMenu';
 
 @Component({
   selector: 'app-nav-content',
@@ -49,7 +50,8 @@ export class NavContentComponent implements OnInit {
     private zone: NgZone,
     private location: Location
   ) {
-    this.clientMenu = EmployeMenu;
+    this.clientMenu = ManagerMenu;
+    // this.clientMenu = EmployeMenu;
     this.atelierMenu = AtelierMenu;
     this.financeMenu = FinanceMenu;
     console.log('mijery menu');

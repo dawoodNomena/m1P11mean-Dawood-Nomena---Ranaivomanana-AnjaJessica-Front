@@ -18,7 +18,7 @@ export const ManagerMenu = [
                 url: '/personnel/ajout',
               },
               {
-                id: 'badges',
+                id: 'button',
                 title: 'Liste',
                 type: 'item',
                 url: '/personnel/list',

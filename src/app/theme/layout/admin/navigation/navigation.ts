@@ -2,6 +2,7 @@ import { FinanceMenu } from './listeMenu/financeMenu';
 import { AtelierMenu } from './listeMenu/atelierMenu';
 import { Injectable, OnInit } from '@angular/core';
 import { EmployeMenu } from './listeMenu/employeMenu';
+import {ManagerMenu} from './listeMenu/managerMenu'
 
 
 export interface NavigationItem {

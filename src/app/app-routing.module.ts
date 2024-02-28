@@ -37,6 +37,12 @@ const routes: Routes = [
         loadComponent: () => import('./demo/back/employe/permission/permission.component'),
         pathMatch: 'full',
       },
+      {
+        path: 'personnel',
+        loadChildren: () => import('./demo/back/manager/personnel/personnel.modules').then(
+          (m) => m.PersonnelModule
+        ),
+      },
 
       // {
       //   path: 'dashboard',
