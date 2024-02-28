@@ -55,6 +55,12 @@ const routes: Routes = [
           (m) => m.OffrelModule
         ),
       },
+      {
+        path: 'chart',
+        loadChildren: () => import('./demo/back/manager/chart/chart.modules').then(
+          (m) => m.ChartModule
+        ),
+      },
 
       // {
       //   path: 'dashboard',
