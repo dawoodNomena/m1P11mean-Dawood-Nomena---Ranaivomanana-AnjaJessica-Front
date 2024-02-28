@@ -100,6 +100,15 @@ const routes: Routes = [
         loadComponent: () => import('./demo/historique_rdv/historique_rdvcomponent'), 
         pathMatch: 'full',
       },
+      {
+        path: 'details_rdv',
+        loadChildren: () =>
+          import('./demo/pages/details_rdv/details_rdv.module').then(
+            (m) => m.Details_rdvModule
+          ),
+          canActivate: [AuthGuard],
+      },
+      
     ],
   },
   // {

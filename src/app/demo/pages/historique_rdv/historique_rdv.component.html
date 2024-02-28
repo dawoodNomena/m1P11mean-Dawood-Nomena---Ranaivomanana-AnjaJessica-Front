@@ -64,25 +64,27 @@
         <div class="row">
           <div class="col-xl-12">
             <app-card
-              cardTitle="Liste des voitures a reparer"
+              cardTitle=""
               [options]="false"
               blockClass="table-border-style"
             >
                 <div class="container">
                     <div class="box" [ngStyle]="{'display': 'flex', 'justify-content': 'space-between'}">
-      
-                    <div class="box-part">
-                                  <input type="text" #indice id="icon-search" class="form-control mb-4" placeholder="search . . " (keyup)="search(indice.value)">
-                    </div> 
+                      <div class="box-part">
+                          <input type="text" #indice id="icon-search" class="form-control mb-4" placeholder="search . . " (keyup)="search(indice.value)">
+                      </div> 
                     </div>
                 </div>
         
                 <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table class="table table-xl table-hover">
                       <thead>
                         <tr>
                             <th>Date et heure </th>
                             <th>Employé</th>
+                            <th>Etat</th>
+                            <th>Paiement</th>
+                            <th></th>
                             <th></th>
                         </tr>
                       </thead>
@@ -90,7 +92,18 @@
                         <tr>
                           <td>2024-02-20 08:00:00</td>
                           <td>Employé 1</td>
-                          <td><button type="button" class="btn btn-outline-dark">Voir details</button> </td>
+                          <td>Terminé</td>
+                          <td>Payé</td>
+                          <td><button type="button" class="btn btn-outline-dark" [routerLink]="['/details_rdv/fiche']">Voir details</button> </td>
+                        </tr>
+
+                        <tr>
+                          <td>2024-02-20 08:00:00</td>
+                          <td>Employé 2</td>
+                          <td>Rdv</td>
+                          <td>Payé</td>
+                          <td><button type="button" class="btn btn-outline-dark" [routerLink]="['/details_rdv/fiche']">Voir details</button> </td>
+                          <td><button type="button" class="btn btn-outline-dark">Payer accompte</button></td>
                         </tr>
                         <!-- <tr *ngFor="let rep of reparations | paginate: { itemsPerPage: 5, currentPage: p }" >
                             <td>{{ rep.designation }}</td>

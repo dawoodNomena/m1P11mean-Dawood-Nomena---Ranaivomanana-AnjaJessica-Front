@@ -94,7 +94,7 @@
                           <td>Employé 1</td>
                           <td>Terminé</td>
                           <td>Payé</td>
-                          <td><button type="button" class="btn btn-outline-dark">Voir details</button> </td>
+                          <td><button type="button" class="btn btn-outline-dark" [routerLink]="['/details_rdv/fiche']">Voir details</button> </td>
                         </tr>
 
                         <tr>
@@ -102,7 +102,7 @@
                           <td>Employé 2</td>
                           <td>Rdv</td>
                           <td>Payé</td>
-                          <td><button type="button" class="btn btn-outline-dark">Voir details</button> </td>
+                          <td><button type="button" class="btn btn-outline-dark" [routerLink]="['/details_rdv/fiche']">Voir details</button> </td>
                           <td><button type="button" class="btn btn-outline-dark">Payer accompte</button></td>
                         </tr>
                         <!-- <tr *ngFor="let rep of reparations | paginate: { itemsPerPage: 5, currentPage: p }" >
