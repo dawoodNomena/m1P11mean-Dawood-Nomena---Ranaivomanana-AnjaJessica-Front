@@ -75,7 +75,7 @@ export const ManagerMenu = [
                 id: 'button',
                 title: 'Temps moyen de travail par employé',
                 type: 'item',
-                url: '/manager/worktime',
+                url: '/chart/worktime',
               },
               {
                 id: 'button',
