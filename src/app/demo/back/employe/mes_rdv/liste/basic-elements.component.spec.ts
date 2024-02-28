@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {ReservationComponent} from './reservationcomponent'; 
+import  BasicElementsComponent  from './mes_rdv.component';
 
-describe('DashboardComponent', () => {
-  let component: ReservationComponent;
-  let fixture: ComponentFixture<ReservationComponent>;
+describe('BasicElementsComponent', () => {
+  let component: BasicElementsComponent;
+  let fixture: ComponentFixture<BasicElementsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReservationComponent],
+      imports: [BasicElementsComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ReservationComponent);
+    fixture = TestBed.createComponent(BasicElementsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

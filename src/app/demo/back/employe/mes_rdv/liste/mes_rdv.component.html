@@ -1,0 +1,64 @@
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+			<div class="card-block">
+				<div class="row justify-content-center">
+					<div class="col-sm-6">
+						<input type="text" #indice id="icon-search" class="form-control mb-4" placeholder="search . . " (keyup)="search(indice.value)">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-12">
+		<app-card
+		  cardTitle=""
+		  [options]="false"
+		  blockClass="table-border-style"
+		>
+			<div class="container">
+				<div class="box" [ngStyle]="{'display': 'flex', 'justify-content': 'space-between'}">
+				  <div class="box-part">
+					  <input type="text" #indice id="icon-search" class="form-control mb-4" placeholder="search . . " (keyup)="search(indice.value)">
+				  </div> 
+				</div>
+			</div>
+	
+			<div class="table-responsive">
+				<table class="table table-xl table-hover">
+				  <thead>
+					<tr>
+						<th>Date et heure </th>
+						<th>Client</th>
+						<th></th>
+						<th></th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td>2024-02-20 08:00:00</td>
+					  <td>Client 1</td>
+					  <td><button type="button" class="btn btn-outline-dark" [routerLink]="['/details_rdv/fiche']">Voir details</button> </td>
+					</tr>
+
+					<tr>
+					  <td>2024-02-20 08:00:00</td>
+					  <td>Client 2</td>
+					  <td><button type="button" class="btn btn-outline-dark" [routerLink]="['/details_rdv/fiche']">Voir details</button> </td>
+					  <td><button type="button" class="btn btn-outline-dark">Terminer</button></td>
+					</tr>
+					<!-- <tr *ngFor="let rep of reparations | paginate: { itemsPerPage: 5, currentPage: p }" >
+						<td>{{ rep.designation }}</td>
+						<td>{{ rep.date_depot }}</td>
+						<td>{{ rep.modele }}</td>
+						<td>{{ rep.matriculation }}</td>
+						<td>{{ rep.etat }}</td>
+						<td><button type="button" class="btn btn-outline-dark" (click)="affecter(rep._id)" >Recuperer</button> </td>
+					</tr> -->
+				  </tbody>
+	
+				</table>
+			  </div>
+		</app-card>
+	</div>
+</div>

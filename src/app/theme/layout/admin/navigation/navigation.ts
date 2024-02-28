@@ -1,7 +1,7 @@
 import { FinanceMenu } from './listeMenu/financeMenu';
 import { AtelierMenu } from './listeMenu/atelierMenu';
 import { Injectable, OnInit } from '@angular/core';
-import { ClientMenu } from './listeMenu/clientMenu';
+import { EmployeMenu } from './listeMenu/employeMenu';
 
 
 export interface NavigationItem {
@@ -40,7 +40,7 @@ export class NavigationItem implements OnInit {
             this.role = JSON.parse(localStorage.getItem('user')).role;
         }
     }
-    if(this.role === 'client') this.menu = ClientMenu;
+    if(this.role === 'client') this.menu = EmployeMenu;
     if(this.role === 'atelier') this.menu = AtelierMenu;
     if(this.role === 'finance') this.menu = FinanceMenu;
   }
@@ -49,6 +49,6 @@ export class NavigationItem implements OnInit {
     
 }
   get() {
-    return ClientMenu;
+    return EmployeMenu;
   }
 }

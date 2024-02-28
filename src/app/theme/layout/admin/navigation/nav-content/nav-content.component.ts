@@ -11,7 +11,7 @@ import { NavigationItem } from '../navigation';
 import { DattaConfig } from 'src/app/app-config';
 import { Location } from '@angular/common';
 import { environment } from 'src/environments/environment';
-import { ClientMenu } from '../listeMenu/clientMenu';
+import { EmployeMenu } from '../listeMenu/employeMenu';
 import { FinanceMenu } from '../listeMenu/financeMenu';
 import { AtelierMenu } from '../listeMenu/atelierMenu';
 
@@ -49,7 +49,7 @@ export class NavContentComponent implements OnInit {
     private zone: NgZone,
     private location: Location
   ) {
-    this.clientMenu = ClientMenu;
+    this.clientMenu = EmployeMenu;
     this.atelierMenu = AtelierMenu;
     this.financeMenu = FinanceMenu;
     console.log('mijery menu');
