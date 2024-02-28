@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-12">
-      <app-card cardTitle="Ajout employé" [options]="false">
+      <app-card cardTitle="Ajout service" [options]="false">
         <hr />
         <div class="row">
           <div class="col-md-3"></div>
@@ -16,37 +16,56 @@
                 />
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Prénom</label>
+                <label for="exampleInputPassword1">Description</label>
                 <input
                   type="text"
                   class="form-control"
-                  [(ngModel)]="formData.prenom"
-                  name="prenom"
+                  [(ngModel)]="formData.description"
+                  name="description"
             
                 
                 />
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Mail</label>
+                <label for="exampleInputPassword1">Prix</label>
                 <input
                   type="text"
                   class="form-control"
-                  [(ngModel)]="formData.mail"
-                  name="mail"
+                  [(ngModel)]="formData.prix"
+                  name="prix"
             
                 />
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Téléphone</label>
+                <label for="exampleInputPassword1">Durée</label>
                 <input
                   type="text"
                   class="form-control"
-                  [(ngModel)]="formData.tel"
-                  name="tel"
+                  [(ngModel)]="formData.duree"
+                  name="duree"
             
                 />
               </div>
-              
+              <div class="form-group">
+                <label for="exampleInputPassword1">Commission</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="formData.commission"
+                  name="commission"
+            
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Catégorie</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="formData.categorie"
+                  name="categorie"
+            
+                />
+              </div>
             <br>
             <div *ngIf="error" class="alert alert-danger alert-dismissible fade show" role="alert">
               Veuillez remplir chaque formulaire !
@@ -61,6 +80,7 @@
             </div>
           </div>
           <div class="col-md-3"></div>
+          
         </div>
         <hr />
       </app-card>

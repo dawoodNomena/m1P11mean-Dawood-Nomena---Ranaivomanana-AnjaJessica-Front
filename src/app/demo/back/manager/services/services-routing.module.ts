@@ -18,7 +18,7 @@ const routes: Routes = [
       {
         path: 'list',
         loadComponent: () =>
-          import('./liste/liste-personnel.component'),  
+          import('./liste/liste-services.component'),  
       },
     ],
   },
@@ -28,4 +28,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PersonnelRoutingModule {}
+export class ServicesRoutingModule {}

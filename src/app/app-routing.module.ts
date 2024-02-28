@@ -43,6 +43,12 @@ const routes: Routes = [
           (m) => m.PersonnelModule
         ),
       },
+      {
+        path: 'services',
+        loadChildren: () => import('./demo/back/manager/services/services.modules').then(
+          (m) => m.ServicesModule
+        ),
+      },
 
       // {
       //   path: 'dashboard',

@@ -27,9 +27,11 @@ export default class AjoutComponent {
   formData = {
     id_utilisateur: '',
     nom: '',
-    prenom: '',
-    mail: '',
-    tel: ''
+    prix: '',
+    description: '',
+    duree: '',
+    commission: '',
+    categorie: '',
   };
 
   ngOnInit() {
