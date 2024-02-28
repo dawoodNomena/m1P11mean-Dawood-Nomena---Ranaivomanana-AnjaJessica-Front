@@ -10,6 +10,21 @@ const routes: Routes = [
         loadComponent: () =>
           import('./worktime/worktime.component'),  
       },
+      {
+        path: 'resanb',
+        loadComponent: () =>
+          import('./resanb/resanb.component'),  
+      },
+      {
+        path: 'chiffre',
+        loadComponent: () =>
+          import('./chiffre/chiffre.component'),  
+      },
+      {
+        path: 'benefice',
+        loadComponent: () =>
+          import('./benefice/benefice.component'),  
+      },
     ],
   },
   // {
