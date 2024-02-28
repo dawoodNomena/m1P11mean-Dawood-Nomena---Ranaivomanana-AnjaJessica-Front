@@ -108,6 +108,11 @@ const routes: Routes = [
           ),
           canActivate: [AuthGuard],
       },
+      {
+        path: 'preference',
+        loadComponent: () => import('./demo/pages/preference/preference.component'),
+        pathMatch: 'full',
+      },
       
     ],
   },
