@@ -9,7 +9,7 @@ import Chart from 'chart.js/auto';
   selector: 'app-basic-elements',
   standalone: true,
   imports: [SharedModule,RouterModule],
-  templateUrl: './worktime.component.html',
+  templateUrl: './resanb.component.html',
   
 })
 export default class BasicElementsComponent implements OnInit{
@@ -22,25 +22,31 @@ export default class BasicElementsComponent implements OnInit{
     
     createChart(){
   
-        this.chart = new Chart("MyChart", {
-          type: 'bar', //this denotes tha type of chart
-    
-          data: {// values on X-Axis
-            labels: ['employe 1', 'employe 2', 'employe 3','employe 4'], 
-               datasets: [
-              {
-                label: "Temps Moyen de travail par jour",
-                data: ['5','6', '8', '7'],
-                backgroundColor: 'blue'
-              }
-            ]
-          },
-          options: {
-            aspectRatio:2.5
-          }
-          
-        });
-      }    
+      this.chart = new Chart("MyChart", {
+        type: 'pie', //this denotes tha type of chart
+        // type: 'doughnut',
+  
+        data: {
+          labels: [
+            'Service 1',
+            'Service 2',
+            'Service 3',
+            'Service 4'
+          ],
+          datasets: [{
+            label: 'Nombre de réservation',
+            data: [10,5,8,4],
+            backgroundColor: [
+              'rgb(255, 99, 132)',
+              'rgb(54, 162, 235)',
+              'rgb(255, 205, 86)',
+              'rgb(75, 192, 192)'
+            ],
+            hoverOffset: 4
+          }]
+        },
+        options: { aspectRatio:2.5}
+      });}   
 
     ngOnInit(): void {
         this.createChart();

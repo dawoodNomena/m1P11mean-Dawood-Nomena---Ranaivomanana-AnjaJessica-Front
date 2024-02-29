@@ -101,19 +101,19 @@ export const ManagerMenu = [
                 id: 'button',
                 title: 'Nombre de reservation par jour par mois',
                 type: 'item',
-                url: '/nb_reservation',
+                url: '/chart/resanb',
               },
               {
                 id: 'button',
                 title: 'Chiffre d affaire par jour par mois',
                 type: 'item',
-                url: '/chiffre_affaire',
+                url: '/chart/chiffre',
               },
               {
                 id: 'button',
                 title: 'Benefice par mois',
                 type: 'item',
-                url: '/benefice_mensuel',
+                url: '/chart/benefice',
               }   
             ],
           },
