@@ -55,7 +55,6 @@
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 10px;
-  .descriptionfont-size: 14px;
 }
 @media screen and (max-width: 960px) {
   .service-box {
