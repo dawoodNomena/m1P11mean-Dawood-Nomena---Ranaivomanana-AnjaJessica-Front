@@ -3,7 +3,7 @@
   "version": "2.2.0",
   "author": "CodedThemes",
   "scripts": {
-    "install": "npm install --force",
+    "install": "npm install --legacy-peer-deps",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
