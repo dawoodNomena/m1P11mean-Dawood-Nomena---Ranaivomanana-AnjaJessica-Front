@@ -92,6 +92,6 @@ export class BreadcrumbComponent {
       }
     });
     this.navigationList = result;
-    this.titleService.setTitle(title + ' | Garage_Mean');
+    this.titleService.setTitle(title + ' | Salon de beauté');
   }
 }
