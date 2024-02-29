@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-sm-12">
+      <app-card cardTitle="Ajout salaire" [options]="false">
+        <hr />
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Date début</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="formData.date_debut"
+                  name="date_debut"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">montant</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="formData.montant"
+                  name="montant"
+                />
+              </div>
+            <br>
+            <div *ngIf="error" class="alert alert-danger alert-dismissible fade show" role="alert">
+              Veuillez remplir chaque formulaire !
+            </div>
+            <button *ngIf="!loading" type="submit" class="btn btn-primary">Valider</button>
+            
+            <div *ngIf="loading" class="text-center">
+              <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Enregistrement...
+              </button>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+        <hr />
+      </app-card>
+    </div>
+
+  </div>
+  

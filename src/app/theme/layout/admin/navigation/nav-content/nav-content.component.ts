@@ -11,10 +11,8 @@ import { NavigationItem } from '../navigation';
 import { DattaConfig } from 'src/app/app-config';
 import { Location } from '@angular/common';
 import { environment } from 'src/environments/environment';
-import { EmployeMenu } from '../listeMenu/employeMenu';
-import { FinanceMenu } from '../listeMenu/financeMenu';
-import { AtelierMenu } from '../listeMenu/atelierMenu';
 import { ManagerMenu } from '../listeMenu/managerMenu';
+import { EmployeMenu } from '../listeMenu/employeMenu';
 
 @Component({
   selector: 'app-nav-content',
@@ -25,13 +23,11 @@ export class NavContentComponent implements OnInit {
   // version
   title = 'Demo application for version numbering';
   currentApplicationVersion = environment.appVersion;
-  clientMenu : any ;
-  atelierMenu : any;
-  financeMenu : any;
+  employeMenu : any;
+  managerMenu : any;
 
-  estClient : boolean = false;
-  estAtelier : boolean = false;
-  estFinance : boolean = false;
+  estEmploye : boolean = false;
+  estManager : boolean = false;
 
   @Output() onNavCollapsedMob = new EventEmitter();
 
@@ -50,16 +46,13 @@ export class NavContentComponent implements OnInit {
     private zone: NgZone,
     private location: Location
   ) {
-    this.clientMenu = ManagerMenu;
-    // this.clientMenu = EmployeMenu;
-    this.atelierMenu = AtelierMenu;
-    this.financeMenu = FinanceMenu;
+    this.employeMenu = EmployeMenu;
+    this.managerMenu = ManagerMenu;
     console.log('mijery menu');
     if(localStorage.getItem('user')!=null){
         var role = JSON.parse(localStorage.getItem('user')).role;
-        if(role === 'client') this.estClient = true;
-        if(role === 'atelier') this.estAtelier = true;
-        if(role === 'finance') this.estFinance = true;
+        if(role === 'Employe') this.estEmploye = true;
+        if(role === 'Manager') this.estManager = true;
     }
     this.config = DattaConfig;
     this.windowWidth = window.innerWidth;

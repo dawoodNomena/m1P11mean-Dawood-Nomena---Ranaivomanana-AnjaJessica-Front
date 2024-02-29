@@ -55,13 +55,13 @@ export const ManagerMenu = [
                 id: 'button',
                 title: 'Ajouter',
                 type: 'item',
-                url: '/services/ajout',
+                url: '/admin/services/ajout',
               },
               {
                 id: 'button',
                 title: 'Liste',
                 type: 'item',
-                url: '/services/list',
+                url: '/admin/services/list',
               }   
             ],
           },
@@ -74,14 +74,40 @@ export const ManagerMenu = [
               {
                 id: 'button',
                 title: 'Salaire',
-                type: 'item',
-                url: '/salaire',
+                type: 'collapse',
+                children: [
+                  {
+                    id: 'button',
+                    title: 'Ajouter',
+                    type: 'item',
+                    url: '/salaire/ajout',
+                  },
+                  {
+                    id: 'button',
+                    title: 'Liste',
+                    type: 'item',
+                    url: '/salaire/list',
+                  },
+                ],
               },
               {
                 id: 'button',
                 title: 'Dépense',
-                type: 'item',
-                url: '/depense',
+                type: 'collapse',
+                children: [
+                  {
+                    id: 'button',
+                    title: 'Ajouter',
+                    type: 'item',
+                    url: '/depense/ajout',
+                  },
+                  {
+                    id: 'button',
+                    title: 'Liste',
+                    type: 'item',
+                    url: '/depense/list',
+                  },
+                ],
               }   
             ],
           },

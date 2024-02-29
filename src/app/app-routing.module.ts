@@ -44,7 +44,7 @@ const routes: Routes = [
         ),
       },
       {
-        path: 'services',
+        path: 'admin/services',
         loadChildren: () => import('./demo/back/manager/services/services.modules').then(
           (m) => m.ServicesModule
         ),
@@ -53,6 +53,18 @@ const routes: Routes = [
         path: 'offre',
         loadChildren: () => import('./demo/back/manager/offre/offre.modules').then(
           (m) => m.OffrelModule
+        ),
+      },
+      {
+        path: 'depense',
+        loadChildren: () => import('./demo/back/manager/depense/depense/depense.modules').then(
+          (m) => m.DepenselModule
+        ),
+      },
+      {
+        path: 'salaire',
+        loadChildren: () => import('./demo/back/manager/depense/salaire/salaire.modules').then(
+          (m) => m.SalaireModule
         ),
       },
       {

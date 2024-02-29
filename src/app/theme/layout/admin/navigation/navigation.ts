@@ -1,5 +1,3 @@
-import { FinanceMenu } from './listeMenu/financeMenu';
-import { AtelierMenu } from './listeMenu/atelierMenu';
 import { Injectable, OnInit } from '@angular/core';
 import { EmployeMenu } from './listeMenu/employeMenu';
 import {ManagerMenu} from './listeMenu/managerMenu'
@@ -41,9 +39,8 @@ export class NavigationItem implements OnInit {
             this.role = JSON.parse(localStorage.getItem('user')).role;
         }
     }
-    if(this.role === 'client') this.menu = EmployeMenu;
-    if(this.role === 'atelier') this.menu = AtelierMenu;
-    if(this.role === 'finance') this.menu = FinanceMenu;
+    if(this.role === 'Employe') this.menu = EmployeMenu;
+    if(this.role === 'Manager') this.menu = ManagerMenu;
   }
 
   ngOnInit(): void {

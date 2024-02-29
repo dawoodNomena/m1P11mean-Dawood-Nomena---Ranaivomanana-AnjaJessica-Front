@@ -14,8 +14,8 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 
 export default class AuthSigninComponent implements OnInit{
     loginGroup : FormGroup;
-    defaultLog : string = "Nomena";
-    defaultPwd : string = "1234";
+    defaultLog : string = "dnomena.nexthope@gmail.com";
+    defaultPwd : string = "Nomena12";
     loginError : boolean = false
     role : any;
     isLoading : boolean = false;
@@ -28,8 +28,8 @@ export default class AuthSigninComponent implements OnInit{
 
     initForm(){
         this.loginGroup = new FormGroup({
-            login : new FormControl('',[Validators.required]),
-            password : new FormControl('',[Validators.required])
+            mail : new FormControl('',[Validators.required]),
+            mdp : new FormControl('',[Validators.required])
         })
     }
 
@@ -40,20 +40,21 @@ export default class AuthSigninComponent implements OnInit{
             .subscribe(
                 response => {
                     this.loginError = false;
-                    localStorage.setItem('user', JSON.stringify(response));
-
+                    localStorage.setItem('user', JSON.stringify(response.user_info));
+                    localStorage.setItem('auth-token', JSON.stringify(response.token));
+                    
                     console.log("atooooo"+ JSON.parse(localStorage.getItem('user')).role)
-                    if(JSON.parse(localStorage.getItem('user')).role == "atelier"){
+                    if(JSON.parse(localStorage.getItem('user')).role == "Client"){
                         console.log(JSON.parse(localStorage.getItem('user')).role);
-                        this.router.navigate(['/reparation/liste'])
+                        this.router.navigate(['/accueil'])
                     }
-                    if(JSON.parse(localStorage.getItem('user')).role == "client"){
+                    if(JSON.parse(localStorage.getItem('user')).role == "Employe"){
                         console.log(JSON.parse(localStorage.getItem('user')).role);
-                        this.router.navigate(['/accueil']);
+                        this.router.navigate(['/mes_rdv/list']);
                     }
-                    if(JSON.parse(localStorage.getItem('user')).role == "finance"){
+                    if(JSON.parse(localStorage.getItem('user')).role == "Manager"){
                         console.log(JSON.parse(localStorage.getItem('user')).role);
-                        this.router.navigate(['/dashboard'])
+                        this.router.navigate(['/personnel/list'])
                     }
                 this.isLoading = false;
                 },

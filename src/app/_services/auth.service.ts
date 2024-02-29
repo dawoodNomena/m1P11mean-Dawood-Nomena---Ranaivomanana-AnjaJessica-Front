@@ -12,7 +12,7 @@ export class AuthService {
   constructor(private http:HttpClient) { }
   login(data):Observable<any>{
       console.log('call login function');
-      return this.http.post(`${environment.baseUrl}/login`,data).pipe(
+      return this.http.post(`${environment.baseUrl}/users/login`,data).pipe(
         catchError(error => {
           console.log('An error occurred:', error);
           return throwError(error);
