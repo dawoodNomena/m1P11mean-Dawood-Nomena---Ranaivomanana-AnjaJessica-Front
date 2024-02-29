@@ -3,6 +3,7 @@
   "version": "2.2.0",
   "author": "CodedThemes",
   "scripts": {
+    "install": "npm install --force",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
